@@ -24,7 +24,7 @@ func main() {
 func messageHandler(w http.ResponseWriter, r *http.Request) {
 	message := r.PathValue("message")
 
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	conn, err := amqp.Dial("amqp://guest:guest@34.94.104.70:5672/")
 	failOnError(err, "Failed to connect to RabbitMQ")
 	defer conn.Close()
 
